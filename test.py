@@ -106,10 +106,10 @@ async def on_message(message):
 		command_list += '```diff\n-2020-02-18기준 금일부터\n-방x위 지시사항으로 정책표상에 시간기재가 금지됩니다.\n-정책적용기준은 폰클 상에 작성된 기준시간과\n-"!정책표" 명령시 테이블 상단 적용일시 확인바랍니다.```'
 		command_list += '\n'
 		command_list += '웹사이트 링크\n'
-		command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pubhtml# \n'     #!링크
+		command_list += 'https://docs.google.com/spreadsheets/d/1iA-tAgT6BpoQjiuTgimPvdQgoCysJ028088RtCa0078/pubhtml# \n'     #!링크
 		command_list += '\n'
 		command_list += '엑셀다운 링크\n'
-		command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pub?output=xlsx \n'     #!링크
+		command_list += 'https://docs.google.com/spreadsheets/d/1iA-tAgT6BpoQjiuTgimPvdQgoCysJ028088RtCa0078/pub?output=xlsx \n'     #!링크
 		gc = gspread.authorize(creds)
 		wks = gc.open('GJ정책표관리').worksheet('무선구두')
 		result = wks.acell('E3').value
