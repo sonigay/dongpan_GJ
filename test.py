@@ -50,7 +50,7 @@ async def on_message(message):
 			description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 			color=0x00ffff
 			)
-		await client.send_message(client.get_channel("674653007132229632"), embed=embed2)
+		await client.send_message(client.get_channel("679370962927616030"), embed=embed2)
 		await client.send_message(message.channel, embed=embed1)
 		
 		
@@ -72,7 +72,7 @@ async def on_message(message):
 			description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
 			color=0x4BAF4B
 			)
-		await client.send_message(client.get_channel("674652501693300737"), embed=embed2)
+		await client.send_message(client.get_channel("679370756735369274"), embed=embed2)
 		await client.send_message(message.channel, embed=embed1)
 		
 		
@@ -95,7 +95,7 @@ async def on_message(message):
 			description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 			color=0xFF848F
 			)
-		await client.send_message(client.get_channel("674654114592063498"), embed=embed2)
+		await client.send_message(client.get_channel("679370924440551424"), embed=embed2)
 		await client.send_message(message.channel, embed=embed1)
 		
 		
@@ -127,7 +127,7 @@ async def on_message(message):
 			description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
 			color=0xf29886
 			)
-		await client.send_message(client.get_channel("672022974223876096"), embed=embed2)
+		await client.send_message(client.get_channel("679370172007579668"), embed=embed2)
 		await client.send_message(message.channel, embed=embed1)	
 
 
