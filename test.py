@@ -7,9 +7,9 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('dongpan-699a93059b16.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('gjhelper-cc7069273059.json', scope)
 client = gspread.authorize(creds)
-doc = client.open_by_url('https://docs.google.com/spreadsheets/d/1hL4uvq2On11zp-_JWoWMG0Gyyuty5Lhvp_gQkfTYsOI')
+doc = client.open_by_url('https://docs.google.com/spreadsheets/d/1MVKpRP5UFV6OX4whUsFr7qp_K_zGa8JLDw0HUbjzY8I')
 
 
 
@@ -37,7 +37,7 @@ async def on_message(message):
 	if message.content.startswith('!동판'):
 		SearchID = message.content[len('!동판')+1:]
 		gc = gspread.authorize(creds)
-		wks = gc.open('정책표수정').worksheet('동판출력')
+		wks = gc.open('GJ정책표관리').worksheet('동판출력')
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		embed1 = discord.Embed(
@@ -58,7 +58,7 @@ async def on_message(message):
 	if message.content.startswith('!공짜폰'):
 		SearchID = message.content[len('!공짜폰')+1:]
 		gc = gspread.authorize(creds)
-		wks = gc.open('정책표수정').worksheet('무선공짜출력')
+		wks = gc.open('GJ정책표관리').worksheet('무선공짜출력')
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		
@@ -81,7 +81,7 @@ async def on_message(message):
 	if message.content.startswith('!외국인공짜폰'):
 		SearchID = message.content[len('!외국인공짜폰')+1:]
 		gc = gspread.authorize(creds)
-		wks = gc.open('정책표수정').worksheet('외국인공짜출력')
+		wks = gc.open('GJ정책표관리').worksheet('외국인공짜출력')
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		
@@ -111,7 +111,7 @@ async def on_message(message):
 		command_list += '엑셀다운 링크\n'
 		command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pub?output=xlsx \n'     #!링크
 		gc = gspread.authorize(creds)
-		wks = gc.open('정책표수정').worksheet('무선구두')
+		wks = gc.open('GJ정책표관리').worksheet('무선구두')
 		result = wks.acell('E3').value
 		embed1 = discord.Embed(
 			title = ':bar_chart: 정책 적용일시: ' + result + '',
