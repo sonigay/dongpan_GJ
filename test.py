@@ -454,7 +454,7 @@ async def on_message(message):
 	if message.content.startswith('!유지기간'):
 		SearchID = message.content[len('!유지기간')+1:]
 		gc2 = gspread.authorize(creds2)
-		wks = gc2.open('오전재고').worksheet('유지기간')
+		wks = gc2.open('GJ재고관리').worksheet('유지기간')
 		wks.update_acell('a1', SearchID)
 		result = wks.acell('b1').value
 		
